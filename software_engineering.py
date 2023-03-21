@@ -25,33 +25,6 @@ def encode_pw(password):
     return new_password
 
 
-def decode_pw(new_password):
-    password = str()
-    for i in str(new_password):
-        if i == '3':
-            password += '0'
-        if i == '4':
-            password += '1'
-        if i == '5':
-            password += '2'
-        if i == '6':
-            password += '3'
-        if i == '7':
-            password += '4'
-        if i == '8':
-            password += '5'
-        if i == '9':
-            password += '6'
-        if i == '1':
-            continue
-        if i == '0':
-            password += '7'
-        if i == '2':
-            password += '8'
-        if i == '3':
-            password += '9'
-    return password
-
 if __name__ == "__main__":
     print("Menu")
     print("-------------")
