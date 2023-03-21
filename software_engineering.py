@@ -51,19 +51,19 @@ def decode_pw(new_password):
             password += '9'
     return password
 
-
-print("Menu")
-print("-------------")
-print("1. Encode")
-print("2. Decode")
-print("3. Quit")
-option = int(input("Please enter an option:"))
-if option == 1:
-    password = input("Please enter a password to encode:")
-    new_password = print(encode_pw(password))
-    print("Your password has been encoded and stored!")
-if option == 2:
-    password = decode_pw(new_password)
-    print("The encoded password is " + new_password + ",and the original password is" + password + ".")
-if option == 3:
-    exit
+if __name__ == "__main__":
+    print("Menu")
+    print("-------------")
+    print("1. Encode")
+    print("2. Decode")
+    print("3. Quit")
+    option = int(input("Please enter an option:"))
+    if option == 1:
+        password = input("Please enter a password to encode:")
+        new_password = print(encode_pw(password))
+        print("Your password has been encoded and stored!")
+    if option == 2:
+        password = decode_pw(new_password)
+        print("The encoded password is " + new_password + ",and the original password is" + password + ".")
+    if option == 3:
+        exit
