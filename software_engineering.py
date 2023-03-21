@@ -1,3 +1,4 @@
+# Ashakiran Rochette
 def encode_pw(password):
     new_password = str()
     for i in str(password):
