@@ -1,4 +1,6 @@
 # Ashakiran Rochette
+# abrochette
+
 def encode_pw(password):
     new_password = str()
     for i in str(password):
@@ -37,7 +39,7 @@ if __name__ == "__main__":
         new_password = print(encode_pw(password))
         print("Your password has been encoded and stored!")
     if option == 2:
-        password = decode_pw(new_password)
-        print("The encoded password is " + new_password + ",and the original password is" + password + ".")
+#        password = decode_pw(new_password)
+#        print("The encoded password is " + new_password + ",and the original password is" + password + ".")
     if option == 3:
         exit
