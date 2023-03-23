@@ -27,6 +27,19 @@ def encode_pw(password):
     return new_password
 
 
+  def decode(new_password):
+        pw = ""
+        for x in range(0, len(new_password)):
+            if new_password[x] == "2":
+                pw += "9"
+            elif new_password[x] == "1":
+                pw += "8"
+            elif new_password[x] == "0":
+                pw += "7"
+            else:
+                pw += str(int(new_password[x]) - 3)
+        return pw
+
 if __name__ == "__main__":
     print("Menu")
     print("-------------")
@@ -39,21 +52,21 @@ if __name__ == "__main__":
         new_password = print(encode_pw(password))
         print("Your password has been encoded and stored!")
     if option == 2:
-        #        password = decode_pw(new_password)
-#        print("The encoded password is " + new_password + ",and the original password is" + password + ".")
+        password = decode(new_password)
+        print("The encoded password is " + new_password + ",and the original password is" + password + ".")
     if option == 3:
         exit
 
-
-    def decode(epw):
+# moved up to above main function
+"""    def decode(new_password):
         pw = ""
-        for x in range(0, len(epw)):
-            if epw[x] == "2":
+        for x in range(0, len(new_password)):
+            if new_password[x] == "2":
                 pw += "9"
-            elif epw[x] == "1":
+            elif new_password[x] == "1":
                 pw += "8"
-            elif epw[x] == "0":
+            elif new_password[x] == "0":
                 pw += "7"
             else:
-                pw += str(int(epw[x]) - 3)
-        return pw
+                pw += str(int(new_password[x]) - 3)
+        return pw"""
