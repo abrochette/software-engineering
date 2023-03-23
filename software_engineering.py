@@ -39,7 +39,21 @@ if __name__ == "__main__":
         new_password = print(encode_pw(password))
         print("Your password has been encoded and stored!")
     if option == 2:
-#        password = decode_pw(new_password)
+        #        password = decode_pw(new_password)
 #        print("The encoded password is " + new_password + ",and the original password is" + password + ".")
     if option == 3:
         exit
+
+
+    def decode(epw):
+        pw = ""
+        for x in range(0, len(epw)):
+            if epw[x] == "2":
+                pw += "9"
+            elif epw[x] == "1":
+                pw += "8"
+            elif epw[x] == "0":
+                pw += "7"
+            else:
+                pw += str(int(epw[x]) - 3)
+        return pw
